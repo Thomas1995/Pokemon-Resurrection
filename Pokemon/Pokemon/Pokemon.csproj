@@ -1,0 +1,643 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{1B8A6DA5-71CF-42EB-B27B-874E108B3284}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Pokemon</RootNamespace>
+    <AssemblyName>Pokemon</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ActionPoint.cs" />
+    <Compile Include="AdminMapEditor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdminMapEditor.Designer.cs">
+      <DependentUpon>AdminMapEditor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AdminPanel.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdminPanel.Designer.cs">
+      <DependentUpon>AdminPanel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Attack.cs" />
+    <Compile Include="BlockedZone.cs" />
+    <Compile Include="Buildings.cs" />
+    <Compile Include="Character.cs" />
+    <Compile Include="DataBase.cs" />
+    <Compile Include="EvolutionItem.cs" />
+    <Compile Include="ExitPoint.cs" />
+    <Compile Include="Flowers.cs" />
+    <Compile Include="FormBag.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormBag.Designer.cs">
+      <DependentUpon>FormBag.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormBattle.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormBattle.Designer.cs">
+      <DependentUpon>FormBattle.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormCharacterCreation.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormCharacterCreation.Designer.cs">
+      <DependentUpon>FormCharacterCreation.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormComputer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormComputer.Designer.cs">
+      <DependentUpon>FormComputer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormEndGame.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormEndGame.Designer.cs">
+      <DependentUpon>FormEndGame.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormEvolution.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormEvolution.Designer.cs">
+      <DependentUpon>FormEvolution.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormGame.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormGame.Designer.cs">
+      <DependentUpon>FormGame.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormLoadingScreen.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormLoadingScreen.Designer.cs">
+      <DependentUpon>FormLoadingScreen.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormMiniGame.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormMiniGame.Designer.cs">
+      <DependentUpon>FormMiniGame.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormMoveDelete.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormMoveDelete.Designer.cs">
+      <DependentUpon>FormMoveDelete.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormNickname.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormNickname.Designer.cs">
+      <DependentUpon>FormNickname.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormPokedex.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormPokedex.Designer.cs">
+      <DependentUpon>FormPokedex.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormPokemons.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormPokemons.Designer.cs">
+      <DependentUpon>FormPokemons.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormQuestion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormQuestion.Designer.cs">
+      <DependentUpon>FormQuestion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormShop.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormShop.Designer.cs">
+      <DependentUpon>FormShop.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormStart.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormStart.Designer.cs">
+      <DependentUpon>FormStart.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Hills.cs" />
+    <Compile Include="Keyboard.cs" />
+    <Compile Include="Map.cs" />
+    <Compile Include="Paint_BlackScreen.cs" />
+    <Compile Include="Paths.cs" />
+    <Compile Include="Pokeball.cs" />
+    <Compile Include="Pokemons.cs" />
+    <Compile Include="Potion.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Resources.cs" />
+    <Compile Include="Structures.cs" />
+    <Compile Include="Trees.cs" />
+    <Compile Include="WildGrass.cs" />
+    <EmbeddedResource Include="AdminMapEditor.resx">
+      <DependentUpon>AdminMapEditor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AdminPanel.resx">
+      <DependentUpon>AdminPanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormBag.resx">
+      <DependentUpon>FormBag.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormBattle.resx">
+      <DependentUpon>FormBattle.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormCharacterCreation.resx">
+      <DependentUpon>FormCharacterCreation.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormComputer.resx">
+      <DependentUpon>FormComputer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormEndGame.resx">
+      <DependentUpon>FormEndGame.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormEvolution.resx">
+      <DependentUpon>FormEvolution.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormGame.resx">
+      <DependentUpon>FormGame.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormLoadingScreen.resx">
+      <DependentUpon>FormLoadingScreen.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormMiniGame.resx">
+      <DependentUpon>FormMiniGame.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormMoveDelete.resx">
+      <DependentUpon>FormMoveDelete.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormNickname.resx">
+      <DependentUpon>FormNickname.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormPokedex.resx">
+      <DependentUpon>FormPokedex.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormPokemons.resx">
+      <DependentUpon>FormPokemons.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormQuestion.resx">
+      <DependentUpon>FormQuestion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormShop.resx">
+      <DependentUpon>FormShop.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormStart.resx">
+      <DependentUpon>FormStart.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\BackgroundArceus.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\BackgroundPikachu.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\BackgroundStartersGen2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\BackgroundBadges.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\logo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\Ground\grass.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\Character\boy_sprite.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\Ground\biggrass.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\Ground\tree.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\Ground\hill.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\Battle\battlebackground.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\Pokemons\pokemon-back.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\Pokemons\pokemon-front.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\Battle\evolutionbackground.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\Battle\bagbackground.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\Items\greatball.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\Items\masterball.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\Items\pokeball.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\Items\ultraball.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\Battle\pokemonsbackground.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.5">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.5 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\Menu\menubag.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\Menu\menupokemon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\Menu\menuarrowdown.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\Ground\flower1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\Ground\flower2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\Buildings\healingcenter.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\Buildings\shop.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\Buildings\house1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\Buildings\house2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\Character\profoak.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\Menu\menupokedex.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\Loadingscreen.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\Buildings\healingcenterinter.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\Character\farmer_sprite.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\Character\fighter_sprite.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\Character\bugcatcher_sprite.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\Character\bugcatcher2_sprite.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\Ground\path.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\Character\kid_sprite.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\Buildings\gym.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\Buildings\shopinter.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\Menu\menusave.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\Buildings\gyminter.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\Badges\badge1.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\Menu\menucut.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\Ground\smalltree.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\MiniGames\background_minigame1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\Character\dad_sprite.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\Character\littleboy_sprite.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\Character\littlegirl_sprite.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\Character\mom_sprite.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\Ground\townpavement.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\Ground\fencefront.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\Ground\fenceside.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\Buildings\house3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\Ground\lantern.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\Badges\badge2.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\Ground\water.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\Ground\waterpolluted.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\Character\oldman_sprite.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\Buildings\hauntedhouseinter.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\Character\oldman2_sprite.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\Character\oldwoman_sprite.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\Ground\mountain.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\Ground\stone.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\Buildings\cave.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\Character\explorer_sprite.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\Character\fighter2_sprite.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\Buildings\caveinter.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\Character\magician_sprite.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\Badges\badge3.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\Menu\menusurf.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\Ground\waterwaves.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\Ground\surfboard.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\Character\swimmer_sprite.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\Character\swimmer2_sprite.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\Character\swimmer3_sprite.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\Character\swimmer4_sprite.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\Buildings\house4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\Buildings\house5.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\Character\dino_sprite.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\Character\fighter3_sprite.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\Character\fisherman_sprite.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\Buildings\arenainter.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\Character\cameraman_sprite.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\Character\dad2_sprite.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\Character\painter_sprite.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\Character\kid2_sprite.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\Character\policeman_sprite.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\Character\teamrocket_sprite.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\Character\teamrocket2_sprite.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\Character\woman_sprite.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\Badges\badge4.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\Ground\ground.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\Badges\badge5.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\Menu\menudig.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\Ground\treesnow.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\Ground\snow.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\Character\woman2_sprite.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\Badges\badge6.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\Ground\ancientcave.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\Character\spouses_sprite.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\Badges\badge7.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\Character\giovanni_sprite.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\Badges\badge8.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\Buildings\misterioushouseinter.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\Character\tobias_sprite.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\Character\oldman3_sprite.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\Character\official_sprite.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\Buildings\house6.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\Buildings\tournamentinter.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\Character\ash_sprite.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\Character\gary_sprite.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\Character\thomas_sprite.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\BackgroundEndgame.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\Menu\menuhelp.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
