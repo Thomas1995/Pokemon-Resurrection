@@ -1,11 +1,17 @@
 # Pokemon-Resurrection
+**Windows only**
 
-![](/printscreens/ps1.png)
+## 1. Intro screen
+![](/printscreens/ps1.png);
 
-![](/printscreens/ps2.png)
+## 2. Walk-through
+![](/printscreens/ps2.png);
 
-![](/printscreens/ps3.png)
+## 3. Battles
+![](/printscreens/ps3.png);
 
-![](/printscreens/ps4.png)
+## 4. Pokemons
+![](/printscreens/ps4.png);
 
-![](/printscreens/ps5.png)
+## 5. Mini-games
+![](/printscreens/ps5.png);
