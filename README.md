@@ -28,4 +28,6 @@ Items can be used during battles: for example, you can boost your pokemon's HP, 
 **What is new?** A pokemon needs special care. You will need to play with him, even feed him. He needs to win battles in order to avoid having trust issues, which make his battle capacity lower. For example, your main pokemon (the one you start each battle with) will trust you more, so try not to focus on a single pokemon. Also, avoid letting your pokemons faint, lose battles, because they will become anxious.
 
 ## 5. Mini-games
-![](/printscreens/ps5.png);
+![](/printscreens/ps5.png)
+
+There are brand new ways to play with your pokemons! There are mini-games, designed to increase (or decrease, if your score is negative) your pokemon's happiness! A happy pokemon is a strong pokemon!
